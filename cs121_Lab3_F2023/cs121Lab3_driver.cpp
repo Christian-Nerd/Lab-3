@@ -127,32 +127,32 @@ int  main( )
 
     // 'A' grade determination
     //YOU ADD YOUR CODE HERE
-    if (sum >= 90)
+    if(ave >= 90)
     {
         grd = 'A';
     }
 
     // 'A'-'B' range grade determination
     //YOU ADD YOUR CODE HERE
-    if (sum < 90 && sum >= 80)
+    if(ave < 90 && ave >= 80)
     {
         grd = 'B';
     }
 
     // 'C'-'D' range grade determination
     //YOU ADD YOUR CODE HERE
-    if (sum < 80 && sum >= 70)
+    if(ave < 80 && ave >= 70)
     {
         grd = 'C';
     }
 
-    if (sum < 70 && sum >= 50)
+    if(ave < 70 && ave >= 50)
     {
         grd = 'D';
     }
     // 'F' grade determination
     //YOU ADD YOUR CODE HERE
-    if (sum < 50)
+    if(ave < 50)
     {
         grd = 'F';
     }
@@ -171,18 +171,17 @@ int  main( )
 
     cout.setf(ios::fixed|ios::showpoint);		// show the decimal point
     cout << setprecision(2);					// show two decimal places
-    cout << setfill('#');   
 
     // data echo
     cout << " You have entered the following three test grades : "
          << " \n " << setw(3) << t1 << setw(14) << " for test 1, " << setw(6) << t2 << setw('6') << " for" << setw(13) << " test 2, and " << setw(6) << t3 << setw(16) << " for test 3, " << "\n\n ";
 
     // print average
-    cout << setw(43) << " The average of the three tests that you"
+    cout << setfill('#') << setw(43) << " The average of the three tests that you"
     << setw(11) << " entered is : " << setw(6) << Average_Of_Tests << "\n\n ";
 
     // print final grade
-    cout << setw(25) << " Your course grade is " << setw(1) << Grade << "." << setw(3) << "\n\n\n";
+    cout << setfill('#') << setw(25) << " Your course grade is " << setw(1) << Grade << "." << setw(3) << "\n\n\n";
 
     return 0;
 
